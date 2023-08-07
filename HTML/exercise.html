@@ -128,6 +128,7 @@
         type="text"
         placeholder="Company name"
         style="display: block; width: 300px; margin-bottom: 10px"
+        required
       />
 
       <label for="full_name">Your name:</label>
@@ -136,6 +137,7 @@
         type="text"
         placeholder="Name"
         style="display: block; width: 300px; margin-bottom: 10px"
+        required
       />
 
       <label for="email_address">Your email:</label>
@@ -144,6 +146,7 @@
         type="email"
         placeholder="Mail address"
         style="display: block; width: 300px; margin-bottom: 10px"
+        required
       />
 
       <label for="phone">Your phone number:</label>
@@ -152,6 +155,7 @@
         type="tel"
         placeholder="Telephone number"
         style="display: block; width: 300px; margin-bottom: 10px"
+        required
       />
 
       <label for="content">Your question:</label>
@@ -160,9 +164,15 @@
         rows="10"
         placeholder="Content of inquiry"
         style="display: block; width: 300px; margin-bottom: 10px"
+        required
       ></textarea>
 
-      <input type="checkbox" id="send_mail" style="margin-bottom: 30px" />
+      <input
+        type="checkbox"
+        id="send_mail"
+        style="margin-bottom: 30px"
+        required
+      />
       <label for="send_mail"
         >Do you want to update information by send email?
       </label>
@@ -172,6 +182,7 @@
         value="SEND"
         onclick="alert('DONE!')"
         style="display: block; width: 200px"
+        required
       />
     </form>
   </body>
