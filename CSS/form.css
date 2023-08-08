@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 12px 18px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #222b63;
+}
+
+table td:not(.other) {
+  box-sizing: content-box;
+  height: 67px;
+  width: 250px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+form input:not(input[type="checkbox"], input[type="submit"]) {
+  box-sizing: border-box;
+  width: 100%;
+  margin-right: 20px;
+  padding: 11px 17px 12px;
+  border: 2px solid #cdcdcd;
+  border-radius: 5px;
+  outline: none;
+}
+
+form label:not(label[for="checkbox"]) {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form select {
+  width: 100%;
+  padding: 11px 17px 12px;
+  border: 2px solid #cdcdcd;
+  border-radius: 5px;
+}
+
+form select:focus {
+  border: 2px solid #2c7dc0;
+}
+
+form input:not(input[type="checkbox"], input[type="submit"]):focus,
+form textarea:focus {
+  border: 2px solid #2c7dc0;
+  border-radius: 5px;
+  padding: 11px 17px 12px;
+}
+
+form textarea {
+  box-sizing: border-box;
+  width: 524px;
+  height: 73px;
+  padding: 11px 17px 12px;
+  border: 2px solid #cdcdcd;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="submit"] {
+  display: block;
+
+  margin-top: 38px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 40px;
+  background-color: #2c7dc0;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+}
+
+input[type="submit"]:active {
+  background-color: #222b63;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #222b63;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  align-self: baseline;
+}
