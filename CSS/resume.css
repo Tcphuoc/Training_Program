@@ -1,0 +1,349 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2c7dc0;
+  --secondary-color: #222b63;
+  --background-color: #ddeff8;
+}
+
+h2 {
+  font-size: 28px;
+  color: #222b63;
+}
+
+p {
+  font-size: 14px;
+}
+
+body {
+  padding: 40px 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+i {
+  font-size: 24px;
+  width: 24px;
+}
+
+/* Sidebar */
+aside {
+  width: 30%;
+  position: sticky;
+  top: 0;
+  height: fit-content;
+  background-color: var(--background-color);
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px 5px var(--background-color);
+}
+
+/* Top sidebar */
+aside div:first-child:not(.info) {
+  text-align: center;
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 19px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+aside img {
+  width: 180px;
+  height: 180px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--background-color);
+}
+
+aside h2,
+p {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+aside div div:not(div.info) {
+  width: 80%;
+  background-color: var(--background-color);
+  margin: 16px auto;
+  padding: 6px;
+  border-radius: 20px;
+}
+
+aside div:not(div.info) > p {
+  margin: 0;
+}
+
+/* Bottom sidebar */
+
+aside > div:last-of-type {
+  display: flex;
+  flex-direction: column;
+  padding: 17px 0;
+}
+
+aside div.info {
+  display: flex;
+  margin: 0 20px;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+aside div.info img {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 0;
+  margin-right: 10px;
+}
+
+aside div.info p {
+  margin: 0;
+}
+
+span i {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+aside div:last-child:not(.info) {
+  padding-top: 17px;
+  padding-bottom: 19px;
+}
+
+aside input {
+  display: block;
+  width: 182px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  color: white;
+  border: 0;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+aside input:hover {
+  background-color: var(--secondary-color);
+}
+
+aside input:active {
+  background-color: white;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+aside a,
+aside a:active,
+aside a:hover {
+  text-decoration: none;
+}
+
+/* Main */
+main {
+  width: 70%;
+  margin-left: 40px;
+  box-sizing: border-box;
+}
+
+main > div {
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 5px var(--background-color);
+  margin-bottom: 40px;
+}
+
+section {
+  padding: 24px 28px;
+}
+
+section:not(section:last-child) {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/* Section Skill */
+section:nth-child(2) > div,
+div.skills div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+div.skills p {
+  color: var(--primary-color);
+}
+
+section div.skills {
+  width: 45%;
+}
+
+section div.progress-bar {
+  height: 10px;
+  background-color: var(--background-color);
+  border-radius: 5px;
+}
+
+section div.progress-bar > div {
+  height: 10px;
+  width: calc(var(--percent) * 1%);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Detail work experience and Education */
+section div.detail {
+  padding: 24px;
+  box-shadow: 0px 0px 5px 2px var(--background-color);
+  border-radius: 5px;
+  border-left: 2px solid var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+div.detail p {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+div.detail h3,
+div.detail p:last-of-type {
+  margin: 0;
+}
+
+/* Detail Form */
+main form {
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  padding: 24px 28px;
+}
+
+form h2 {
+  color: white;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+form label {
+  color: white;
+  margin-bottom: 10px;
+}
+
+form > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+form > div:first-of-type div {
+  width: 45%;
+}
+
+form div input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+form textarea {
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+form input:focus,
+form textarea:focus {
+  background-color: var(--background-color);
+}
+
+form input[type="submit"] {
+  display: block;
+  width: 230px;
+  height: 60px;
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form input[type="submit"]:active {
+  box-shadow: inset 0 0 10px var(--primary-color);
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 999px) {
+  /* For Tablet */
+  body {
+    display: block;
+    padding: 40px 30px;
+  }
+
+  aside {
+    position: static;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  aside div div:not(div.info) {
+    padding: 6px 20px;
+    width: fit-content;
+  }
+
+  aside > div:last-of-type {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  aside img:first-of-type {
+    height: 120px;
+    width: 120px;
+  }
+
+  aside > div:last-of-type {
+    width: fit-content;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section:nth-child(2) > div {
+    display: block;
+  }
+
+  section div.skills {
+    width: 100%;
+  }
+
+  form > div:first-of-type {
+    display: block;
+  }
+
+  form > div:first-of-type div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
