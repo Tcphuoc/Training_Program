@@ -8,19 +8,29 @@
   </head>
   <body>
     <h2>Register User</h2>
-    <form>
+    <form action="welcome.php" method="post">
       <table>
         <tr>
           <td>
             <div>
               <label for="fname">First name</label>
-              <input type="text" class="text" placeholder="Enter First Name" />
+              <input
+                type="text"
+                name="fname"
+                class="text"
+                placeholder="Enter First Name"
+              />
             </div>
           </td>
           <td>
             <div>
               <label for="lname">Last name</label>
-              <input type="text" class="text" placeholder="Enter Last Name" />
+              <input
+                type="text"
+                name="lname"
+                class="text"
+                placeholder="Enter Last Name"
+              />
             </div>
           </td>
         </tr>
@@ -28,7 +38,7 @@
           <td>
             <div>
               <label for="gender">Gender</label>
-              <select id="gender">
+              <select id="gender" name="gender">
                 <option>Male</option>
                 <option>Female</option>
                 <option>Other</option>
@@ -38,7 +48,12 @@
           <td>
             <div>
               <label for="dob">Date Of Birth</label>
-              <input type="date" class="text" placeholder="dd/mm/yyyy" />
+              <input
+                type="date"
+                name="dob"
+                class="text"
+                placeholder="dd/mm/yyyy"
+              />
             </div>
           </td>
         </tr>
@@ -46,27 +61,46 @@
           <td>
             <div>
               <label for="email">E-mail</label>
-              <input type="email" class="text" placeholder="Enter E-mail" />
+              <input
+                type="email"
+                name="email"
+                class="text"
+                placeholder="Enter E-mail"
+              />
             </div>
           </td>
           <td>
             <div>
               <label for="phone">Phone Number</label>
-              <input type="tel" class="text" placeholder="Enter Phone Number" />
+              <input
+                type="tel"
+                name="tel"
+                class="text"
+                placeholder="Enter Phone Number"
+              />
             </div>
           </td>
         </tr>
         <tr>
           <td colspan="3">
             <label for="address">Address</label>
-            <textarea rows="2" placeholder="Enter Address"></textarea>
+            <textarea
+              rows="2"
+              name="address"
+              placeholder="Enter Address"
+            ></textarea>
           </td>
         </tr>
         <tr>
           <td>
             <div>
               <label for="username">Username</label>
-              <input type="text" class="text" placeholder="Enter Username" />
+              <input
+                type="text"
+                name="username"
+                class="text"
+                placeholder="Enter Username"
+              />
             </div>
           </td>
         </tr>
@@ -78,25 +112,28 @@
                 type="password"
                 class="text"
                 placeholder="Enter Password"
+                name="pass"
               />
             </div>
           </td>
           <td>
             <div>
               <label for="confirm">Confirm Password</label>
-              <input type="password" class="text" />
+              <input type="password" name="confirm" class="text" />
             </div>
           </td>
         </tr>
         <tr>
           <td class="other">
             <input type="checkbox" id="checkbox" />
-            <label for="checkbox">I have read the agreement</label>
+            <label for="checkbox" name="checkbox"
+              >I have read the agreement</label
+            >
           </td>
         </tr>
         <tr>
           <td class="other" colspan="2">
-            <input type="submit" value="Submit" />
+            <input type="submit" name="button_submit" value="Submit" />
           </td>
         </tr>
       </table>
