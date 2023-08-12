@@ -3,7 +3,7 @@ def calculate_area
   puts "2. Hình vuông"
   puts "3. Hình tròn"
   puts
-
+  print "Lựa chọn"
   choice = gets.chomp.to_i
 
   case choice
