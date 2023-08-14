@@ -1,6 +1,7 @@
 require './book.rb'
 require './news.rb'
 require './magazine.rb'
+require './renter.rb'
 
 $documents = []
 def add_document
@@ -33,3 +34,9 @@ def calc_rental_fee
 end
 
 calc_rental_fee()
+
+puts
+
+phuoc = Renter.new("Phước", "tcphuoc0511@gmail.com", "0909090909", $documents)
+phuoc.add_document(Book.new("B2", "NXB Kim Đồng", 7, 10000, "Nguyễn Văn C", 100))
+phuoc.total_fee(3)
