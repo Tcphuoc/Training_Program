@@ -19,6 +19,6 @@ class Renter
       sum += doc.rental_fee(hours)
       puts "Số tiền thuê #{doc.id} trong #{hours} giờ: #{doc.rental_fee(hours)}"
     end
-    sum
+    puts "Tổng số tiền thuê sách: #{sum}"
   end
 end
