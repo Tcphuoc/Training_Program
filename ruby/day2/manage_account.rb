@@ -27,8 +27,7 @@ class AccountManage
   
   def statement(id_account, name_account)
     if check_info(id_account, name_account)
-      puts "Chủ tài khoản: #{@name_account}"
-      puts "Số dư tài khoản: #{@amount_account}"
+      display_info
     else
       puts "Thông tin không trùng khớp"
     end
@@ -41,11 +40,16 @@ class AccountManage
     end
   
     @name_account = new_name if check_info(id_account, old_name)
-    statement(@id_account, @name_account)
+    display_info
   end
 
   private
   def check_info(id_account, name_account)
     id_account == @id_account && name_account == @name_account
+  end
+
+  def display_info
+    puts "Chủ tài khoản: #{@name_account}"
+    puts "Số dư tài khoản: #{@amount_account}"
   end
 end
