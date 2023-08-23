@@ -1,9 +1,8 @@
 arr = [10, 5, 7, 3, 2, 2, 1]
 
 # Câu 1
-max = arr[0]
-arr.each { |element| max = element if max < element }
-puts "Giá trị lớn nhất: #{max}"
+puts "Giá trị lớn nhất: #{arr.max}"
+puts "Giá trị nhỏ nhất #{arr.min}"
 puts
 
 # Câu 2
