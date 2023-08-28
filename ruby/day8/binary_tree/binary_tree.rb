@@ -7,6 +7,8 @@ class Binary_tree
   end
 
   def find(root, value)
+    return false if root.value != value && root.leaf?
+
     if root.value == value
       return true
     elsif root.value < value

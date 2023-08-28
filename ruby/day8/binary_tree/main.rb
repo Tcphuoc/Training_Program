@@ -21,7 +21,7 @@ def create_binary_tree
 end
 
 tree = create_binary_tree
-value = 1
+value = 10
 def find_node(value, tree)
   if tree.find(tree.root, value)
     puts "Giá trị #{value} có tồn tại trong cây nhị phân"

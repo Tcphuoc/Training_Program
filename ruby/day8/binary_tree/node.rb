@@ -5,4 +5,8 @@ class Node
     @right = right
     @value = value
   end
+
+  def leaf?
+    return true if left == nil && right == nil
+  end
 end
