@@ -17,7 +17,7 @@ def create_binary_tree
   node6.left = node5
   node6.right = node7
 
-  tree = Binary_tree.new(root)
+  Binary_tree.new(root)
 end
 
 tree = create_binary_tree

@@ -1,7 +1,8 @@
-require_relative 'node.rb'
+require_relative 'node'
 
 class Binary_tree
   attr_accessor :root
+
   def initialize(root)
     @root = root
   end
@@ -10,7 +11,7 @@ class Binary_tree
     return false if root.value != value && root.leaf?
 
     if root.value == value
-      return true
+      true
     elsif root.value < value
       find(root.right, value)
     else
