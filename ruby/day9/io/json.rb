@@ -7,4 +7,5 @@ output = CSV.generate do |csv|
   csv << json[:employee].values
 end
 
-puts output
+convert = proc{ |header| "#{header.capitalize}: " }
+puts CSV.parse(output, headers: true, return_headers: true, header_converters: convert)
