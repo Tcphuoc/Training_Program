@@ -16,9 +16,9 @@ class OrderProcessor
   private
 
   def total_price
-    total = 0
-    @items.each do |item|
-      total += item.price * item.quantity
+    total = @items.reduce(0) do |sum, item|
+      check_inventory(item)
+      sum += item.calc_price
     end
     total -= total * @customer.discount_percent if @customer.has_discount?
   end
@@ -27,8 +27,8 @@ class OrderProcessor
     raise 'Không có mặt hàng nào!' if @items.empty?
   end
 
-  def check_inventory
-    @items.each { |item| raise "Không đủ hàng trong kho cho #{item.name}" unless item.is_available? }
+  def check_inventory(item)
+    raise "Không đủ hàng trong kho cho #{item.name}" unless item.is_available?
   end
 
   def create_invoice(total_price)
@@ -76,5 +76,9 @@ class Item
 
   def is_available?
     available_quantity >= quantity
+  end
+
+  def calc_price
+    price * quantity
   end
 end
