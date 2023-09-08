@@ -3,46 +3,40 @@ class OrderProcessor
     @customer = order.customer
     @items = order.items
 
-    if check_item
-      # Kiểm tra tồn kho
-      check_inventory
+    check_item
+    check_inventory
 
-      # Tạo hóa đơn
-      invoice = create_invoice(customer, items, total_price - discount)
+    # Tạo hóa đơn
+    invoice = create_invoice(total_price)
 
-      # Gửi email xác nhận
-      send_confirmation_email(customer, invoice)
-    end
+    # Gửi email xác nhận
+    send_confirmation_email(invoice)
   end
 
   private
 
   def total_price
     total = 0
-    items.each do |item|
+    @items.each do |item|
       total += item.price * item.quantity
     end
-    total
-  end
-
-  def discount(total)
-    total * customer.discount_percent if customer.has_discount?
+    total -= total * @customer.discount_percent if @customer.has_discount?
   end
 
   def check_item
-    raise "Không có mặt hàng nào!" if @items.empty?
+    raise 'Không có mặt hàng nào!' if @items.empty?
   end
 
   def check_inventory
     @items.each { |item| raise "Không đủ hàng trong kho cho #{item.name}" unless item.is_available? }
   end
 
-  def create_invoice(customer, items, total_price)
+  def create_invoice(total_price)
     # Tạo hóa đơn và lưu vào cơ sở dữ liệu
     # ...
   end
 
-  def send_confirmation_email(customer, invoice)
+  def send_confirmation_email(invoice)
     # Gửi email xác nhận cho khách hàng
     # ...
   end
